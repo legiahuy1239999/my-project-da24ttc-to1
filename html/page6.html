@@ -1,17 +1,99 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <link rel ="stylesheet" href ="../css/style6.css">
+    <title>Ẩm thực</title>
+
+    <link rel="stylesheet" href="../css/style6.css">
 </head>
 
 <body>
+
+    <h1>THƯ VIỆN ẨM THỰC</h1>
+
+    <!-- Thông báo -->
+    <div id="thongbao">
+        Món ăn đã được thêm vào giỏ hàng <br>
+        Chúc quý khách ăn ngon miệng ❤️
+    </div>
+
+    <!-- Pizza -->
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800">
+
+        <h2>Pizza</h2>
+
+        <p>180.000đ</p>
+
+        <button onclick="hienChiTiet('Pizza hải sản, phô mai, size lớn')">
+            Chi tiết sản phẩm
+        </button>
+
+        <button onclick="muaNgay()">
+            Mua ngay
+        </button>
+
+    </div>
+
+    <!-- Burger -->
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800">
+
+        <h2>Burger</h2>
+
+        <p>120.000đ</p>
+
+        <button onclick="hienChiTiet('Burger bò Mỹ, rau xanh, phô mai')">
+            Chi tiết sản phẩm
+        </button>
+
+        <button onclick="muaNgay()">
+            Mua ngay
+        </button>
+
+    </div>
+
+    <!-- Salad -->
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800">
+
+        <h2>Salad</h2>
+
+        <p>90.000đ</p>
+
+        <button onclick="hienChiTiet('Salad rau sạch, tốt cho sức khỏe')">
+            Chi tiết sản phẩm
+        </button>
+
+        <button onclick="muaNgay()">
+            Mua ngay
+        </button>
+
+    </div>
+
     <script>
-        const newDiv = document.createElement("div");
-        const newText = document.createTextNode("thành công");
-        newDiv.setAttribute("class", "product-item");
-        newDiv.appendChild(newText);
-        document.body.appendChild(newDiv);
+
+        function hienChiTiet(thongtin){
+
+            alert("Thông tin món ăn: " + thongtin);
+
+        }
+
+        function muaNgay(){
+
+            document.getElementById("thongbao").style.display = "block";
+
+            setTimeout(function(){
+
+                document.getElementById("thongbao").style.display = "none";
+
+            },5000);
+
+        }
+
     </script>
+
 </body>
-<html>
+</html>
